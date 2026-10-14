@@ -1,4 +1,4 @@
-package com.antimiapp.data.models;
+package com.antimiApp.data.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

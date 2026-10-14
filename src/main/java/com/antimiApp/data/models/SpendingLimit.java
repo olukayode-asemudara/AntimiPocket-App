@@ -1,4 +1,4 @@
-package com.antimiapp.data.models;
+package com.antimiApp.data.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -8,17 +8,15 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-@Document(collection = "transactions")
-public class Transaction {
+@Document(collection = "spending_limits")
+public class SpendingLimit {
 
     @Id
     private String id;
 
-    private String pocketId;
-    private BigDecimal amount;
-    private TransactionType type;
-    private String description;
-    private TransactionStatus status;
+    private String teenProfileId;
+    private BigDecimal limitAmount;
+    private SpendingPeriod period;
     private Date createdAt = new Date();
 }
 

@@ -1,22 +1,20 @@
-package com.antimiapp.data.models;
+package com.antimiApp.data.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-@Document(collection = "pockets")
-public class Pocket {
+@Document(collection = "teen_profiles")
+public class TeenProfile {
 
     @Id
     private String id;
 
-    private String teenProfileId;
-    private String pocketName;
-    private BigDecimal balance = BigDecimal.ZERO;
+    private String userId;
+    private Date dateOfBirth;
+    private String guardianId;
     private Date createdAt = new Date();
 }
-
